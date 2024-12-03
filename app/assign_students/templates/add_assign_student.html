@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block title %} Add Assign Student {% endblock %}
+
+{% block content %}
+<div class="formContainer">
+    <form method="POST" class="writingForm">
+        <h2 class="formHead">Enter or Edit Details</h2>
+        <p>
+            {{form.hidden_tag()}}
+        </p>
+        
+        <p>
+            {{form.student_id.label(class = "label")}}
+            <br>
+            {{form.student_id(class = "scrolling")}}
+        </p>
+    
+        <p>
+            {{form.group_id.label(class = "label")}}
+            <br>
+            {{form.group_id(class = "scrolling")}}
+        </p>
+        
+        <p>
+            {{form.submit(class = "submitButton")}}
+        </p>
+    </form>
+</div>
+
+
+{% endblock %}

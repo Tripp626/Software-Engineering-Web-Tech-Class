@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block title %} Course List {% endblock %}
+
+{% block content %}
+
+    <h1>Welcome to Course List</h1>
+    <p class="description">This page contains all the records about the various courses in the school. The records can also be updated and deleted here</p>
+    <br>
+    <div class="table">
+        <a class="btn-grad" href="{{url_for('course.add_courses')}}">Add Course</a>&nbsp;
+
+        <form method="POST" action="{{url_for('course.delete_all_courses')}}">
+            <button type="submit" onclick="return confirm('Are you sure that you want to delete all courses')" href = "#" class="btn-grad-delete">Delete all Courses</button>
+        </form>
+        
+    </div>
+
+    <br>
+
+    <div> 
+        <table>
+            <tr>
+                <th>S/N</th>
+                <th>Level ID</th>
+                <th>Level Name</th>
+                <th>Program ID</th>
+                <th>Program Name</th>
+                <th>Course Name</th>
+                <th>Course Code</th>
+                <th>Action</th>
+            </tr>
+
+            {% for i in cs%}
+            <tr class="row">
+                <td> {{i.id}} </td>
+                <td> {{i.level.id}} </td>
+                <td> {{i.level.name}} </td>
+                <td> {{i.program.id}} </td>
+                <td> {{i.program.name}} </td>
+                <td> {{i.name}} </td>
+                <td> {{i.code}} </td>
+                <td><a class="button_primary", href="{{url_for('course.update_course', id = i.id)}}">Edit</a>&nbsp;
+                    <form method="POST" action = "{{url_for('course.delete_course', id = i.id)}}">
+                        <button type="submit" onclick="return confirm('Are you sure that you want to delete this course')">Delete</button>
+                    </form>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>   <br>
+
+{% endblock %}

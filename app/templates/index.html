@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel = "stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style.css')}}">
+    <link rel = "icon" type="image/png" href="/static/css/stitch_silhouette_betterd-removebg-preview.png">
+</head>
+
+<body>
+    <header>
+        <div> <img src="/static/css/default.png" alt="oops"  class="logo"> </div>
+
+        <nav>
+            <ul>
+                <li><a href="{{url_for('faculty.get_faculty_list')}}">Faculty</a></li>
+                <li><a href="{{url_for('department.get_department_list')}}">Department</a></li>
+                <li><a href="{{url_for('program.get_program_list')}}">Program</a></li>
+                <li><a href="{{url_for('level.get_level_list')}}">Level</a></li>
+                <li><a href="{{url_for('course.get_course_list')}}">Course</a></li>
+                <li><a href="{{url_for('group.get_group_list')}}">Group</a></li>
+                <li><a href="{{url_for('student.get_student_list')}}">Student</a></li>
+                <li><a href="{{url_for('assign_students.get_assign_students_to_group_list')}}">Assign Student</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="container">
+            <div class="container2">
+                <ul>
+                    <li><div class="socialIcon" id="facebook_logo"></div></li>
+                    <li><div class="socialIcon" id="google_logo"></div></li>
+                    <li><div class="socialIcon" id="instagram_logo"></div></li>
+                    <li><div class="socialIcon" id="linkedin_logo"></div></li>
+                    <li><div class="socialIcon" id="pinterest_logo"></div></li>
+                    <li><div class="socialIcon" id="snapchat_logo"></div></li>
+                    <li><div class="socialIcon" id="twitter_logo"></div></li>
+                    <li><div class="socialIcon" id="whatsapp_logo"></div></li>
+                    <li><div class="socialIcon" id="youtube_logo"></div></li>
+                </ul>
+            </div>
+            <div class="container2">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact Me</a></li>
+                    <li><a href="">My Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <div class="container2" id = "ending">
+            <p>Nile University Software Engineering Student</p>
+        </div>       
+    </footer>
+</body>
+</html>

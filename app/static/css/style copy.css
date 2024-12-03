@@ -1,0 +1,81 @@
+body{
+    background: linear-gradient(to right, blue, white);
+}
+
+header{
+    background: linear-gradient(to right, white, black);
+    padding: 5px;
+}
+
+header nav{
+    text-align: center;
+}
+
+header nav ul li{
+    list-style-type: none;
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: aliceblue;
+}
+
+header nav ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+.table{
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td{
+    width: max-content;
+    border: 1px solid;
+    padding: 8px;
+    text-align: left;
+}
+
+.button_primary{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button_danger{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
