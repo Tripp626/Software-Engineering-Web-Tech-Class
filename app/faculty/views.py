@@ -19,6 +19,7 @@ def add_faculty():
         new_faculty = Faculty(name = faculty_name, code = faculty_code)
         db.session.add(new_faculty)
         db.session.commit()
+        flash("New faculty added successfully!")
         return redirect(url_for("faculty.get_faculty_list"))
 
     return render_template("add_faculty.html", form = forms)
